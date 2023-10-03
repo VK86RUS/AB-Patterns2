@@ -12,6 +12,7 @@ import static ru.netology.DataGenerator.Registration.getUser;
 import static ru.netology.DataGenerator.getRandomLogin;
 import static ru.netology.DataGenerator.getRandomPassword;
 
+
 class AuthTest {
 
     @BeforeEach
@@ -26,7 +27,7 @@ class AuthTest {
         $("[data-test-id='login'] input").setValue(registeredUser.getLogin());
         $("[data-test-id='password'] input").setValue(registeredUser.getPassword());
         $("[data-test-id='action-login']").click();
-        $("h2").shouldHave(text("  Личный кабинет"));
+        $("h2").shouldHave(text("Личный кабинет"));
         // TODO: добавить логику теста, в рамках которого будет выполнена попытка входа в личный кабинет с учётными
         //  данными зарегистрированного активного пользователя, для заполнения полей формы используйте
         //  пользователя registeredUser
